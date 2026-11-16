@@ -1,0 +1,39 @@
+company_id: company_B
+reporting_currency: USD
+
+sources:
+  - id: ap_lines
+    type: ap
+    path: Cantill_DataML_Task_Kit/company_B/invoice_lines.csv
+    prefix: ""
+    id_col: line_id
+    amount_col: line_amount
+    amount_is_gross: false
+    currency_col: currency
+    rate_col: currency_rate
+    date_col: invoice_date
+    fallback_date_col: posting_date
+    supplier_name_col: null
+    vendor_id_col: vendor_id
+    item_id_col: material_number
+    description_col: line_description
+    gl_account_col: gl_account
+    gl_description_col: gl_account_description
+    document_type_col: document_type
+    invoice_num_col: invoice_number
+    invoice_line_col: invoice_line
+
+fx_rates:
+  path: Cantill_DataML_Task_Kit/company_B/fx_rates_usd.csv
+  currency_col: currency
+  month_col: month
+  rate_col: units_per_usd
+
+taxonomy:
+  path: Cantill_DataML_Task_Kit/company_B/taxonomy_B.csv
+  level_cols: [category_l1, category_l2, category_l3]
+
+seed_labels:
+  path: Cantill_DataML_Task_Kit/company_B/seed_labels.csv
+  id_col: line_id
+

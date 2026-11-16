@@ -1,0 +1,46 @@
+# Task data files - STRICTLY CONFIDENTIAL - DO NOT COMMIT
+*.csv
+*.zip
+*.pdf
+Cantill_DataML_Task_Kit/
+data/
+raw_data/
+test_data/
+blind_test_data/
+
+# Python & Environment
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Local cache & checkpoints
+models/
+.cache/
+embeddings/
+*.pkl
+*.joblib
+scratch/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Exception: Keep output files and submission configs as required by brief
+!submission/
+!submission/*.csv
+!submission/*.yaml
+!submission/*.json
+
