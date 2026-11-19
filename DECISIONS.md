@@ -33,3 +33,4 @@
 ### 6. Zero-Shot Classification Strategy for Unseen Categories
 - **Finding:** Category trees differ between companies (Company A has 40 leaf categories; Company B has 40 leaf categories across 9 L1s; Company C is from a new industry with up to 4 levels). Ground-truth labels are unavailable for new companies.
 - **Decision:** Built a zero-shot semantic matching engine that dynamically ingests any hierarchical taxonomy CSV at runtime. It combines sentence-transformers semantic embeddings (`all-MiniLM-L6-v2`) with character/word n-gram TF-IDF representations. Confidence scores reflect normalized cosine similarities.
+

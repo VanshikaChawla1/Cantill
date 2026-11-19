@@ -1,0 +1,28 @@
+company_id: company_C
+reporting_currency: USD
+
+sources:
+  - id: ap_lines
+    type: ap
+    path: blind_test_data/Blind_Test_Files/C/invoice_lines.csv
+    prefix: ""
+    id_col: line_id
+    amount_col: line_amount_usd
+    amount_is_gross: false
+    currency_col: null
+    rate_col: null
+    date_col: invoice_date
+    fallback_date_col: status_date
+    supplier_name_col: supplier_name
+    vendor_id_col: supplier_name
+    item_id_col: product_service_code
+    description_col: line_description
+    gl_account_col: null
+    gl_description_col: gl_account_description
+    document_type_col: submission_type
+    invoice_num_col: invoice_number
+    invoice_line_col: invoice_line
+
+taxonomy:
+  path: blind_test_data/Blind_Test_Files/C/category_tree_C.csv
+  level_cols: [category_l1, category_l2, category_l3, category_l4]

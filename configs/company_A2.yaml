@@ -1,0 +1,50 @@
+company_id: company_A
+joins:
+- erp_po_col: po_number
+  erp_po_item_col: po_item
+  erp_source: erp
+  match_strategy: po_fuzzy
+  tool_po_col: po_reference
+  tool_source: tool
+labels:
+  id_col: record_id
+  path: Cantill_DataML_Task_Kit/company_A/labels_A.csv
+reporting_currency: ZAR
+sources:
+- amount_col: value_zar
+  amount_is_gross: false
+  date_col: posting_date
+  date_format: '%Y-%m-%d'
+  description_col: material_short_text
+  id: erp
+  id_col: line_id
+  item_id_col: material_number
+  path: blind_test_data/Blind_Test_Files/A2/erp_goods_receipts.csv
+  po_col: po_number
+  po_item_col: po_item
+  prefix: 'ERP:'
+  service_description_col: service_short_text
+  supplier_name_col: supplier_name
+  type: erp
+  vendor_id_col: vendor_id
+- amount_col: gross_amount
+  amount_is_gross: true
+  date_col: invoice_date
+  date_format: '%Y-%m-%d'
+  default_vat_rate: 0.15
+  description_col: line_text
+  id: tool
+  id_col: tool_record_id
+  path: blind_test_data/Blind_Test_Files/A2/invoice_tool_export.csv
+  po_col: po_reference
+  prefix: 'TOOL:'
+  status_col: status
+  supplier_name_col: supplier_name_as_captured
+  type: tool
+  vat_col: vat_rate
+taxonomy:
+  level_cols:
+  - category_l1
+  - category_l2
+  - category_l3
+  path: Cantill_DataML_Task_Kit/company_A/taxonomy_A.csv

@@ -1,0 +1,37 @@
+company_id: company_B
+fx_rates:
+  currency_col: currency
+  month_col: month
+  path: blind_test_data/Blind_Test_Files/B2/fx_rates_usd.csv
+  rate_col: units_per_usd
+reporting_currency: USD
+seed_labels:
+  id_col: line_id
+  path: Cantill_DataML_Task_Kit/company_B/seed_labels.csv
+sources:
+- amount_col: line_amount
+  amount_is_gross: false
+  currency_col: currency
+  date_col: invoice_date
+  description_col: line_description
+  document_type_col: document_type
+  fallback_date_col: posting_date
+  gl_account_col: gl_account
+  gl_description_col: gl_account_description
+  id: ap_lines
+  id_col: line_id
+  invoice_line_col: invoice_line
+  invoice_num_col: invoice_number
+  item_id_col: material_number
+  path: blind_test_data/Blind_Test_Files/B2/invoice_lines.csv
+  prefix: ''
+  rate_col: currency_rate
+  supplier_name_col: null
+  type: ap
+  vendor_id_col: vendor_id
+taxonomy:
+  level_cols:
+  - category_l1
+  - category_l2
+  - category_l3
+  path: Cantill_DataML_Task_Kit/company_B/taxonomy_B.csv

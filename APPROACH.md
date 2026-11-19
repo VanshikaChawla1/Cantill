@@ -57,3 +57,4 @@ On Company B seed test set (evaluated against 3,000 seed labels):
 - **Model Used:** Local zero-shot dense sentence transformer (`all-MiniLM-L6-v2`) and scikit-learn TF-IDF vectorizer.
 - **External API Dependency:** None required. Operates completely offline, self-contained, and unattended.
 - **LLM API Cost per 1,000 lines:** **$0.00** (Free, runs locally on CPU/GPU without external API keys or rate limits).
+
